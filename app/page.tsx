@@ -8,11 +8,6 @@ const features = [
   ["03", "Un dossier qui avance", "Une attestation et des documents structurés, prêts à être partagés au bon moment."],
 ];
 
-const audiences = [
-  { id: "particuliers", label: "Pour les particuliers", title: "Comprenez votre profil", text: "Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes.", action: "Découvrir mon profil", icon: "↗" },
-  { id: "professionnels", label: "Pour les professionnels", title: "Sécurisez vos ventes", text: "Faites passer vos acquéreurs par Courtia avant la vente et avancez avec des projets mieux préparés.", action: "Découvrir Courtia Pro", icon: "↗" },
-];
-
 export default function Home() {
   const [sent, setSent] = useState(false);
 
@@ -46,11 +41,11 @@ export default function Home() {
           <img className="brand-logo brand-logo-inverse" src="/courtia-logo.png" alt="Courtia" />
         </button>
         <nav className="nav-links" aria-label="Navigation principale">
-          <button onClick={() => scrollToId("particuliers")}>Particuliers</button>
-          <button onClick={() => scrollToId("professionnels")}>Professionnels</button>
+          <button onClick={() => scrollToId("particuliers")}>Pour vous</button>
           <button onClick={() => scrollToId("fonctionnalites")}>La plateforme</button>
+          <button onClick={() => scrollToId("app")}>L&apos;application</button>
         </nav>
-        <button className="nav-login" onClick={() => scrollToId("contact")}>Se connecter <span>↗</span></button>
+        <a className="nav-pro" href="/professionnels">Courtia Pro <span>↗</span></a>
       </header>
 
       <section className="hero" id="top">
@@ -64,7 +59,7 @@ export default function Home() {
             <p>Courtia est l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.</p>
             <div className="hero-actions">
               <button className="button button-primary" onClick={() => scrollToId("particuliers")}>Je suis particulier <span>↗</span></button>
-              <button className="button button-glass" onClick={() => scrollToId("professionnels")}>Je suis professionnel <span>↗</span></button>
+              <a className="button button-glass" href="/professionnels">Courtia Pro <span>↗</span></a>
             </div>
             <div className="hero-meta"><span><b>10</b> axes analysés</span><i /> <span><b>&lt; 5 min</b> pour comprendre</span><i /> <span><b>100%</b> confidentiel</span></div>
           </div>
@@ -91,13 +86,12 @@ export default function Home() {
         <div className="scroll-cue"><span /> Faites défiler</div>
       </section>
 
-      <section className="audience-section" aria-label="Les usages de Courtia">
-        <div className="section-wrap audience-wrap">
-          <div className="section-intro" data-reveal><span className="eyebrow eyebrow-light">Un outil, deux façons d&apos;avancer</span><h2>Le bon réflexe,<br /><em>au bon moment.</em></h2></div>
-          <div className="audience-grid">
-            {audiences.map((audience, index) => <article className={`audience-card audience-card-${index + 1}`} id={audience.id} key={audience.id} data-reveal>
-              <div className="card-number">0{index + 1}</div><span className="audience-label">{audience.label}</span><h3>{audience.title}</h3><p>{audience.text}</p><button className="text-link" onClick={() => scrollToId(index === 0 ? "fonctionnalites" : "pro-flow")}>{audience.action} <span>{audience.icon}</span></button><div className="card-glow" />
-            </article>)}
+      <section className="audience-section" id="particuliers" aria-label="Courtia pour les particuliers">
+        <div className="section-wrap audience-wrap private-wrap">
+          <div className="section-intro" data-reveal><span className="eyebrow eyebrow-light">Pour les particuliers</span><h2>Le bon réflexe,<br /><em>au bon moment.</em></h2></div>
+          <div className="private-card-grid">
+            <article className="private-card private-card-main" data-reveal><div className="card-number">01</div><span className="audience-label">Votre projet immobilier</span><h3>Comprenez votre profil avant la banque.</h3><p>Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes.</p><button className="text-link" onClick={() => scrollToId("fonctionnalites")}>Découvrir mon profil <span>↗</span></button><div className="card-glow" /></article>
+            <div className="private-proof-stack"><article className="private-proof" data-reveal><span>✦</span><div><b>Un diagnostic clair</b><p>10 axes analysés, sans jargon inutile.</p></div></article><article className="private-proof" data-reveal><span>✓</span><div><b>Un dossier qui avance</b><p>Une attestation prête à partager.</p></div></article></div>
           </div>
         </div>
       </section>
@@ -121,7 +115,7 @@ export default function Home() {
         <div className="section-wrap"><div className="screens-heading" data-reveal><div><span className="eyebrow eyebrow-light">L&apos;expérience Courtia</span><h2>Votre projet,<br /><em>en un coup d&apos;œil.</em></h2></div><div className="screens-brand"><img src="/courtia-logo.png" alt="Courtia" /><span>Une application pensée pour avancer.</span></div></div>
           <div className="screen-gallery">
             <div className="screen-frame screen-dashboard" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/dashboard</b></div><div className="screen-body"><aside><img src="/courtia-logo.png" alt="Courtia" /><i className="screen-nav-active">▦ Tableau de bord</i><i>◇ Mon projet</i><i>◒ Mon profil</i><i>✓ Attestation</i></aside><div className="screen-content"><div className="screen-greeting">Bonjour Sophie <span>Projet en bonne voie</span></div><small>Votre profil emprunteur</small><h3>Un temps d&apos;avance<br /><em>sur votre projet.</em></h3><div className="screen-score-row"><div><b>85</b><span>/100</span><small>Score Courtia</small></div><div className="screen-mini-chart"><i /><i /><i /><i /><i /></div></div><div className="screen-metric-row"><div><small>Capacité estimée</small><b>220 000 €</b></div><div><small>Apport disponible</small><b>35 000 €</b></div></div></div></div><span className="screen-caption">01 · Tableau de bord</span></div>
-            <div className="screen-frame screen-profile" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/mon-profil</b></div><div className="screen-body profile-body"><div className="profile-header"><div><small>Mon profil emprunteur</small><h3>Le regard de<br /><em>la banque.</em></h3></div><div className="profile-ring"><b>85</b><span>/100</span></div></div><div className="profile-axis"><div><span>Stabilité professionnelle</span><b>92%</b><i><em style={{width:"92%"}} /></i></div><div><span>Gestion bancaire</span><b>84%</b><i><em style={{width:"84%"}} /></i></div><div><span>Apport</span><b>78%</b><i><em style={{width:"78%"}} /></i></div><div><span>Reste à vivre</span><b>88%</b><i><em style={{width:"88%"}} /></i></div></div><div className="profile-pill">✦ Clara a identifié 3 points forts dans votre dossier</div></div><span className="screen-caption">02 · Diagnostic détaillé</span></div>
+            <div className="screen-frame screen-profile" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/mon-profil</b></div><div className="screen-body profile-body"><div className="profile-header"><div><small>Mon profil emprunteur</small><h3>Le regard de<br /><em>la banque.</em></h3></div><div className="profile-ring"><b>85</b><span>/100</span></div></div><div className="profile-axis"><div><span>Stabilité de l&apos;emploi</span><b>92%</b><i><em style={{width:"92%"}} /></i></div><div><span>Gestion bancaire</span><b>84%</b><i><em style={{width:"84%"}} /></i></div><div><span>Apport</span><b>78%</b><i><em style={{width:"78%"}} /></i></div><div><span>Reste à vivre</span><b>88%</b><i><em style={{width:"88%"}} /></i></div></div><div className="profile-pill">✦ Clara a identifié 3 points forts dans votre dossier</div></div><span className="screen-caption">02 · Diagnostic détaillé</span></div>
             <div className="screen-frame screen-certificate" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/attestation</b></div><div className="certificate-body"><div className="certificate-top"><img src="/courtia-logo.png" alt="Courtia" /><span>Attestation #CU-8492</span></div><div className="certificate-seal">✓</div><small>PROFIL EMPRUNTEUR</small><h3>Votre projet est<br /><em>prêt à avancer.</em></h3><div className="certificate-summary"><span><small>Projet</small><b>Appartement · 300 000 €</b></span><span><small>Diagnostic</small><b>Très bon profil</b></span></div><button className="certificate-button">Partager l&apos;attestation ↗</button></div><span className="screen-caption">03 · Attestation partageable</span></div>
           </div>
         </div>
@@ -131,16 +125,11 @@ export default function Home() {
         <div className="section-wrap"><div className="timeline-heading" data-reveal><span className="eyebrow">Le réflexe Courtia</span><h2>Avant chaque étape,<br /><em>préparez la suivante.</em></h2><p>Avant de chercher. Avant de faire une offre. Avant de rencontrer votre banque. Courtia vous donne le temps d&apos;avance qu&apos;il vous manquait.</p></div><div className="timeline" data-reveal><div className="timeline-line" /><div><span>01</span><h3>Dialogue</h3><p>Clara vous pose les bonnes questions.</p></div><div><span>02</span><h3>Analyse</h3><p>Votre profil est lu sur 10 axes.</p></div><div><span>03</span><h3>Attestation</h3><p>Votre projet devient partageable.</p></div><div><span>04</span><h3>Partage</h3><p>Vous avancez avec les bons interlocuteurs.</p></div></div></div>
       </section>
 
-      <section className="pro-section" id="professionnels">
-        <div className="section-wrap pro-wrap"><div className="pro-copy" data-reveal><span className="eyebrow">Courtia pour les professionnels</span><h2>Votre acquéreur est-il<br /><em>vraiment prêt ?</em></h2><p>Les projets motivés ne deviennent pas toujours des ventes. Courtia vous aide à préparer vos acquéreurs avant l&apos;offre et à avancer avec plus de visibilité.</p><button className="button button-primary" onClick={() => scrollToId("contact")}>Découvrir Courtia Pro <span>↗</span></button></div><div className="pro-panel" id="pro-flow" data-reveal><div className="pro-panel-top"><span>Parcours acquéreur</span><span className="pro-badge">Courtia Pro</span></div><div className="pro-buyer"><span className="buyer-avatar">A</span><div><b>Alexandre Martin</b><small>Appartement · 300 000 €</small></div><span className="ready-badge">Acquéreur prêt</span></div><div className="pro-steps"><div className="done"><span>✓</span><small>Projet</small></div><i /><div className="done"><span>✓</span><small>Diagnostic</small></div><i /><div className="done"><span>✓</span><small>Attestation</small></div><i /><div><span>4</span><small>Offre</small></div></div><div className="pro-panel-footer"><span>Dernière activité <b>il y a 8 min</b></span><button onClick={() => scrollToId("contact")}>Voir le dossier ↗</button></div></div></div>
-        <div className="pro-proof section-wrap" data-reveal><div><span className="proof-icon">✦</span><b>Moins de visites inutiles.</b><span>Des acquéreurs mieux préparés.</span></div><div><span className="proof-icon">⌁</span><b>Avant la vente,</b><span>il y a Courtia.</span></div></div>
-      </section>
-
       <section className="manifesto-section section-wrap" data-reveal><span className="manifesto-mark">“</span><p>Pour faire court, mieux vaut connaître son dossier avant que la banque ne le découvre.</p><span className="manifesto-signature">Pour faire court, il y a Courtia.</span></section>
 
       <section className="cta-section" id="contact"><div className="cta-glow" /><div className="section-wrap cta-inner" data-reveal><span className="eyebrow">Avant la banque, il y a Courtia</span><h2>Donnez un temps d&apos;avance<br /><em>à votre projet.</em></h2><p>Créez votre compte et découvrez votre profil en quelques minutes.</p><form onSubmit={handleStart}><input type="email" required placeholder="Votre adresse email" aria-label="Votre adresse email" /><button className="button button-primary" type="submit">{sent ? "Lien envoyé ✓" : "Commencer"} <span>↗</span></button></form><small>Aucun engagement · Données protégées · Parcours confidentiel</small></div></section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Particuliers</a><a href="#professionnels">Professionnels</a><a href="#fonctionnalites">La plateforme</a><a href="#contact">Contact</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Pour vous</a><a href="#fonctionnalites">La plateforme</a><a href="#app">L&apos;application</a><a href="/professionnels">Courtia Pro ↗</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
     </main>
   );
 }
