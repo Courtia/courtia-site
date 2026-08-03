@@ -102,6 +102,8 @@ export default function Home() {
         <div className="scroll-cue"><span /> Faites défiler</div>
       </section>
 
+      <section className="proof-marquee" aria-label="Les moments où Courtia vous aide"><div className="proof-marquee-track"><span>AVANT DE CHERCHER</span><i>✦</i><span>AVANT DE FAIRE UNE OFFRE</span><i>✦</i><span>AVANT LA BANQUE</span><i>✦</i><span>AVANT DE NÉGOCIER</span><i>✦</i><span>AVANT DE CHERCHER</span><i>✦</i><span>AVANT DE FAIRE UNE OFFRE</span><i>✦</i></div></section>
+
       <section className="audience-section" id="particuliers" aria-label="Courtia pour les particuliers">
         <div className="section-wrap audience-wrap private-wrap">
           <div className="section-intro" data-reveal><span className="eyebrow eyebrow-light">Pour les particuliers</span><h2>Le bon réflexe,<br /><em>au bon moment.</em></h2></div>
@@ -116,6 +118,16 @@ export default function Home() {
         <div className="eyebrow eyebrow-light">Le point de départ</div>
         <div className="story-layout"><div><h2>Vous voyez votre projet.<br /><em>La banque voit votre dossier.</em></h2></div><div className="story-copy"><p>Vous connaissez votre projet, parfois votre capacité d&apos;emprunt, mais rarement la façon dont votre dossier sera réellement analysé.</p><p>Courtia vous aide à voir les deux — pour arriver mieux préparé, au moment où chaque décision compte.</p><button className="text-link dark-link" onClick={() => scrollToId("fonctionnalites")}>Voir comment ça marche <span>↗</span></button></div></div>
         <div className="story-stats"><div><strong>10</strong><span>axes pour comprendre<br />votre profil</span></div><div><strong>&lt; 5 min</strong><span>pour obtenir<br />votre diagnostic</span></div><div><strong>30 j</strong><span>de validité pour<br />votre attestation</span></div></div>
+      </section>
+
+      <section className="mosaic-section">
+        <div className="section-wrap"><div className="mosaic-heading" data-reveal><div><span className="eyebrow eyebrow-light">Une plateforme qui vous répond</span><h2>Pas une simulation.<br /><em>Un regard sur votre projet.</em></h2></div><p>Chaque écran Courtia transforme une question complexe en prochaine étape claire.</p></div>
+          <div className="mosaic-grid">
+            <article className="mosaic-card mosaic-chat" data-reveal><div className="mosaic-card-top"><span className="mosaic-icon clara-icon">C</span><div><b>Clara</b><small>Votre copilote IA</small></div><span className="online-dot" /></div><div className="chat-bubble chat-bubble-soft">Bonjour Sophie, où en êtes-vous de votre projet ?</div><div className="chat-bubble chat-bubble-user">Je cherche un appartement autour de 300 000 €.</div><div className="chat-bubble chat-bubble-soft">Très bien. Commençons par regarder le profil que la banque verra en vous.</div><div className="mosaic-input">Écrivez votre réponse… <span>↑</span></div><label>01 · Dialogue</label></article>
+            <article className="mosaic-card mosaic-radar" data-reveal><div className="mosaic-card-top"><span className="mosaic-icon radar-icon">◒</span><div><b>Votre diagnostic</b><small>Mis à jour à l&apos;instant</small></div><span className="mosaic-menu">•••</span></div><div className="radar-score"><strong>85</strong><span>/100</span></div><div className="radar-lines"><i /><i /><i /><i /><i /></div><div className="radar-tags"><span>Stabilité</span><span>Apport</span><span>Gestion</span></div><label>02 · Analyse</label></article>
+            <article className="mosaic-card mosaic-attestation" data-reveal><div className="attestation-orb">✓</div><span className="eyebrow">Attestation Courtia</span><h3>Votre projet est<br /><em>prêt à avancer.</em></h3><div className="attestation-line"><span>Diagnostic</span><b>Très bon profil</b></div><div className="attestation-line"><span>Validité</span><b>30 jours</b></div><button>Partager mon attestation <span>↗</span></button><label>03 · Partage</label></article>
+          </div>
+        </div>
       </section>
 
       <section className="platform-section" id="fonctionnalites">
