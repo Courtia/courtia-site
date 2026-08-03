@@ -45,9 +45,8 @@ export default function Home() {
   return (
     <main className="site-shell">
       <nav className="topbar" aria-label="Navigation principale">
-        <button className="brand" onClick={() => scrollToId("top")} aria-label="Retour en haut">
-          <span className="brand-mark" aria-hidden="true"><span /></span>
-          <span>courtia</span>
+        <button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut">
+          <img className="brand-logo" src="/courtia-logo.png" alt="Courtia" />
         </button>
 
         <div className={`nav-links ${menuOpen ? "is-open" : ""}`}>
@@ -150,7 +149,7 @@ export default function Home() {
 
       <section className="final-cta" id="contact"><div><span className="section-label"><span>06</span> Prêt à reprendre la main ?</span><h2>Votre projet mérite<br /><em>un copilote.</em></h2></div><button className="button button-dark" onClick={() => scrollToId("simuler")}>Parler à Courtia <span>↗</span></button></section>
 
-      <footer className="footer"><div className="footer-top"><button className="brand" onClick={() => scrollToId("top")}><span className="brand-mark" aria-hidden="true"><span /></span><span>courtia</span></button><p>Le courtage qui vous rend plus fort.</p><div className="footer-links"><a href="#solutions">Solutions</a><a href="#methode">La méthode</a><a href="#contact">Contact</a><a href="#">Mentions légales</a></div></div><div className="footer-bottom"><span>© 2026 Courtia. Tous droits réservés.</span><span>Intermédiaire en opérations de banque et services de paiement · ORIAS 20002802</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le courtage qui vous rend plus fort.</p><div className="footer-links"><a href="#solutions">Solutions</a><a href="#methode">La méthode</a><a href="#contact">Contact</a><a href="#">Mentions légales</a></div></div><div className="footer-bottom"><span>© 2026 Courtia. Tous droits réservés.</span><span>Intermédiaire en opérations de banque et services de paiement · ORIAS 20002802</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
     </main>
   );
 }
