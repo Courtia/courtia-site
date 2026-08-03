@@ -13,6 +13,19 @@ export default function Home() {
 
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>("[data-reveal]");
+    const hero = document.querySelector<HTMLElement>(".hero");
+    const heroVisual = document.querySelector<HTMLElement>(".hero-visual");
+    function moveHero(event: PointerEvent) {
+      if (!hero || !heroVisual || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const bounds = hero.getBoundingClientRect();
+      const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
+      const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
+      heroVisual.style.setProperty("--tilt-y", `${x * 2.2}deg`);
+      heroVisual.style.setProperty("--tilt-x", `${y * -1.5}deg`);
+      heroVisual.style.setProperty("--float-x", `${x * 5}px`);
+      heroVisual.style.setProperty("--float-y", `${y * 4}px`);
+    }
+    hero?.addEventListener("pointermove", moveHero);
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -22,7 +35,10 @@ export default function Home() {
       });
     }, { threshold: 0.12 });
     items.forEach((item) => observer.observe(item));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      hero?.removeEventListener("pointermove", moveHero);
+    };
   }, []);
 
   function scrollToId(id: string) {
