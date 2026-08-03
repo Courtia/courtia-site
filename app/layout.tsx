@@ -6,19 +6,19 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Courtia — Votre projet immobilier, accompagné de A à Z",
-  description: "La plateforme IA qui accompagne les emprunteurs et les professionnels à chaque étape du financement immobilier.",
+  title: "Courtia — Avant la banque, il y a Courtia",
+  description: "L’outil IA pour comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.",
   metadataBase: new URL("https://courtia.fr"),
   openGraph: {
-    title: "Courtia — Votre projet immobilier, accompagné de A à Z",
-    description: "La plateforme IA qui accompagne les emprunteurs et les professionnels à chaque étape du financement immobilier.",
+    title: "Courtia — Avant la banque, il y a Courtia",
+    description: "L’outil IA pour comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.",
     type: "website",
     locale: "fr_FR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Courtia — Votre projet immobilier, accompagné de A à Z",
-    description: "La plateforme IA qui accompagne les emprunteurs et les professionnels à chaque étape du financement immobilier.",
+    title: "Courtia — Avant la banque, il y a Courtia",
+    description: "L’outil IA pour comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.",
   },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };
