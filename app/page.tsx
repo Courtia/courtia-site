@@ -60,6 +60,7 @@ export default function Home() {
           <button onClick={() => scrollToId("particuliers")}>Pour vous</button>
           <button onClick={() => scrollToId("fonctionnalites")}>La plateforme</button>
           <button onClick={() => scrollToId("app")}>L&apos;application</button>
+          <button onClick={() => scrollToId("offres")}>Les offres</button>
         </nav>
         <a className="nav-pro" href="/professionnels">Courtia Pro <span>↗</span></a>
       </header>
@@ -72,7 +73,7 @@ export default function Home() {
           <div className="hero-copy" data-reveal>
             <span className="eyebrow">Le crédit avec un temps d&apos;avance</span>
             <h1>Avant la banque,<br /><em>il y a Courtia.</em></h1>
-            <p>Courtia est l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.</p>
+            <p>Courtia est votre copilote financier : l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et présenter le projet que votre banquier attend.</p>
             <div className="hero-actions">
               <button className="button button-primary" onClick={() => scrollToId("particuliers")}>Je suis particulier <span>↗</span></button>
               <a className="button button-glass" href="/professionnels">Courtia Pro <span>↗</span></a>
@@ -108,8 +109,8 @@ export default function Home() {
         <div className="section-wrap audience-wrap private-wrap">
           <div className="section-intro" data-reveal><span className="eyebrow eyebrow-light">Pour les particuliers</span><h2>Le bon réflexe,<br /><em>au bon moment.</em></h2></div>
           <div className="private-card-grid">
-            <article className="private-card private-card-main" data-reveal><div className="card-number">01</div><span className="audience-label">Votre projet immobilier</span><h3>Comprenez votre profil avant la banque.</h3><p>Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes.</p><button className="text-link" onClick={() => scrollToId("fonctionnalites")}>Découvrir mon profil <span>↗</span></button><div className="card-glow" /></article>
-            <div className="private-proof-stack"><article className="private-proof" data-reveal><span>✦</span><div><b>Un diagnostic clair</b><p>10 axes analysés, sans jargon inutile.</p></div></article><article className="private-proof" data-reveal><span>✓</span><div><b>Un dossier qui avance</b><p>Une attestation prête à partager.</p></div></article></div>
+            <article className="private-card private-card-main" data-reveal><div className="card-number">01</div><span className="audience-label">Votre projet immobilier</span><h3>Présentez le dossier que votre banquier attend.</h3><p>Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes et quoi préparer.</p><button className="text-link" onClick={() => scrollToId("fonctionnalites")}>Découvrir mon profil <span>↗</span></button><div className="card-glow" /></article>
+            <div className="private-proof-stack"><article className="private-proof" data-reveal><span>✦</span><div><b>Une faisabilité immédiate</b><p>Testez la viabilité de votre projet en un clic.</p></div></article><article className="private-proof" data-reveal><span>✓</span><div><b>Un dossier simplifié</b><p>Une attestation et des documents prêts à partager.</p></div></article></div>
           </div>
         </div>
       </section>
@@ -145,6 +146,16 @@ export default function Home() {
             <div className="screen-frame screen-dashboard" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/dashboard</b></div><div className="screen-body"><aside><img src="/courtia-logo.png" alt="Courtia" /><i className="screen-nav-active">▦ Tableau de bord</i><i>◇ Mon projet</i><i>◒ Mon profil</i><i>✓ Attestation</i></aside><div className="screen-content"><div className="screen-greeting">Bonjour Sophie <span>Projet en bonne voie</span></div><small>Votre profil emprunteur</small><h3>Un temps d&apos;avance<br /><em>sur votre projet.</em></h3><div className="screen-score-row"><div><b>85</b><span>/100</span><small>Score Courtia</small></div><div className="screen-mini-chart"><i /><i /><i /><i /><i /></div></div><div className="screen-metric-row"><div><small>Capacité estimée</small><b>220 000 €</b></div><div><small>Apport disponible</small><b>35 000 €</b></div></div></div></div><span className="screen-caption">01 · Tableau de bord</span></div>
             <div className="screen-frame screen-profile" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/mon-profil</b></div><div className="screen-body profile-body"><div className="profile-header"><div><small>Mon profil emprunteur</small><h3>Le regard de<br /><em>la banque.</em></h3></div><div className="profile-ring"><b>85</b><span>/100</span></div></div><div className="profile-axis"><div><span>Stabilité de l&apos;emploi</span><b>92%</b><i><em style={{width:"92%"}} /></i></div><div><span>Gestion bancaire</span><b>84%</b><i><em style={{width:"84%"}} /></i></div><div><span>Apport</span><b>78%</b><i><em style={{width:"78%"}} /></i></div><div><span>Reste à vivre</span><b>88%</b><i><em style={{width:"88%"}} /></i></div></div><div className="profile-pill">✦ Clara a identifié 3 points forts dans votre dossier</div></div><span className="screen-caption">02 · Diagnostic détaillé</span></div>
             <div className="screen-frame screen-certificate" data-reveal><div className="screen-chrome"><span /><span /><span /><b>courtia.app/attestation</b></div><div className="certificate-body"><div className="certificate-top"><img src="/courtia-logo.png" alt="Courtia" /><span>Attestation #CU-8492</span></div><div className="certificate-seal">✓</div><small>PROFIL EMPRUNTEUR</small><h3>Votre projet est<br /><em>prêt à avancer.</em></h3><div className="certificate-summary"><span><small>Projet</small><b>Appartement · 300 000 €</b></span><span><small>Diagnostic</small><b>Très bon profil</b></span></div><button className="certificate-button">Partager l&apos;attestation ↗</button></div><span className="screen-caption">03 · Attestation partageable</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="offers-section" id="offres">
+        <div className="section-wrap"><div className="offers-heading" data-reveal><div><span className="eyebrow eyebrow-light">Votre parcours Courtia</span><h2>De la première question<br /><em>au dossier prêt à partir.</em></h2></div><p>Choisissez le niveau d&apos;autonomie dont vous avez besoin. Vous avancez à votre rythme, avec les bons livrables au bon moment.</p></div>
+          <div className="offer-grid">
+            <article className="offer-card offer-card-start" data-reveal><div className="offer-card-top"><span>01</span><b>Pour commencer</b></div><h3>Étude de<br /><em>faisabilité</em></h3><p>Évaluez votre profil et la viabilité de votre projet grâce à un diagnostic clair, construit pour vous aider à décider.</p><div className="offer-footer"><strong>Gratuit</strong><button onClick={() => scrollToId("contact")}>Commencer <span>↗</span></button></div></article>
+            <article className="offer-card offer-card-attestation" data-reveal><div className="offer-card-top"><span>02</span><b>Pour convaincre</b></div><h3>Attestation<br /><em>de financement</em></h3><p>Transformez votre diagnostic en preuve concrète pour rassurer un vendeur et donner du poids à votre offre.</p><div className="offer-footer"><strong>39 €</strong><button onClick={() => scrollToId("contact")}>Obtenir mon attestation <span>↗</span></button></div></article>
+            <article className="offer-card offer-card-dossier" data-reveal><div className="offer-card-top"><span>03</span><b>Pour avancer seul</b></div><h3>Dossier de prêt<br /><em>au bout des doigts</em></h3><p>Téléchargez un dossier complet, une note de synthèse et un plan de financement prêts à présenter aux banques.</p><div className="offer-footer"><strong>199 €</strong><button onClick={() => scrollToId("contact")}>Préparer mon dossier <span>↗</span></button></div></article>
           </div>
         </div>
       </section>
