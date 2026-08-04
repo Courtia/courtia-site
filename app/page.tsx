@@ -60,7 +60,7 @@ export default function Home() {
           <button onClick={() => scrollToId("particuliers")}>Pour vous</button>
           <button onClick={() => scrollToId("fonctionnalites")}>La plateforme</button>
           <button onClick={() => scrollToId("app")}>L&apos;application</button>
-          <button onClick={() => scrollToId("offres")}>Les offres</button>
+          <a href="/tarifs">Tarifs</a>
         </nav>
         <a className="nav-pro" href="/professionnels">Courtia Pro <span>↗</span></a>
       </header>
