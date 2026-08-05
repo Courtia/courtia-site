@@ -8,6 +8,8 @@ const proSteps = [
   ["03", "Vous suivez l’avancée", "Visualisez les étapes franchies et arrivez mieux préparé à la vente."],
 ];
 
+const COURTIA_PRO_URL = "https://courtia-espace-pro.benjaminpoisson17.chatgpt.site";
+
 export default function ProfessionalsPage() {
   const [sent, setSent] = useState(false);
 
@@ -39,7 +41,10 @@ export default function ProfessionalsPage() {
       <header className="pro-topbar">
         <a className="brand" href="/"><img className="brand-logo brand-logo-inverse" src="/courtia-logo.png" alt="Courtia" /></a>
         <nav><a href="#pro-feature">La solution</a><a href="#parcours">Le parcours</a><a href="#contact">Contact</a></nav>
-        <a className="pro-back" href="/">Pour les particuliers <span>↗</span></a>
+        <div className="pro-topbar-actions">
+          <a className="pro-login" href={COURTIA_PRO_URL}>Se connecter <span>↗</span></a>
+          <a className="pro-back" href="/">Pour les particuliers <span>↗</span></a>
+        </div>
       </header>
 
       <section className="pro-hero-page" id="top">
@@ -58,7 +63,7 @@ export default function ProfessionalsPage() {
 
       <section className="pro-cta-section" id="contact"><div className="pro-cta-glow" /><div className="section-wrap pro-cta-inner" data-pro-reveal><span className="eyebrow">Courtia Pro</span><h2>Faites avancer<br /><em>vos ventes.</em></h2><p>Découvrez comment Courtia peut s&apos;intégrer à votre parcours acquéreur.</p><form onSubmit={handleStart}><input type="email" required placeholder="Votre adresse email professionnelle" aria-label="Votre adresse email professionnelle" /><button className="button button-primary" type="submit">{sent ? "Demande envoyée ✓" : "Échanger avec nous"} <span>↗</span></button></form><small>Réponse sous 24h · Démonstration personnalisée</small></div></section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="#pro-feature">La solution</a><a href="#parcours">Le parcours</a><a href="#contact">Contact</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="#pro-feature">La solution</a><a href="#parcours">Le parcours</a><a href="#contact">Contact</a><a href={COURTIA_PRO_URL}>Se connecter</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
     </main>
   );
 }
