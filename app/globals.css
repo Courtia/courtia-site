@@ -158,7 +158,7 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 .site-shell .offer-card h3 { color:#0b1b2a; font-size:29px; letter-spacing:-.06em; line-height:1.03; margin:56px 0 18px; }.site-shell .offer-card h3 em { color:#1564dd; font-style:normal; }.site-shell .offer-card-dossier h3 { color:#fff; }.site-shell .offer-card-dossier h3 em { color:#b8e963; }
 .site-shell .offer-card > p { color:#607783; font-size:12px; line-height:1.6; margin:0; max-width:285px; }.site-shell .offer-card-dossier > p { color:#b4c6ce; }
 .site-shell .offer-footer { align-items:end; display:flex; gap:15px; justify-content:space-between; margin-top:auto; padding-top:30px; }.site-shell .offer-footer strong { color:#0b1b2a; font-size:21px; letter-spacing:-.04em; }.site-shell .offer-card-dossier .offer-footer strong { color:#b8e963; }
-.site-shell .offer-footer button { background:transparent; border:0; color:#1564dd; cursor:pointer; font-size:9px; font-weight:800; line-height:1.3; padding:0; text-align:right; }.site-shell .offer-footer button span { font-size:14px; margin-left:5px; }.site-shell .offer-card-dossier .offer-footer button { color:#fff; }
+.site-shell .offer-footer button,.site-shell .offer-footer a { background:transparent; border:0; color:#1564dd; cursor:pointer; font-size:9px; font-weight:800; line-height:1.3; padding:0; text-align:right; text-decoration:none; }.site-shell .offer-footer button span,.site-shell .offer-footer a span { font-size:14px; margin-left:5px; }.site-shell .offer-card-dossier .offer-footer button,.site-shell .offer-card-dossier .offer-footer a { color:#fff; }
 @media (max-width:980px) { .site-shell .offer-grid { grid-template-columns:1fr 1fr; }.site-shell .offer-card-dossier { grid-column:1 / -1; } }
 @media (max-width:680px) { .site-shell .offers-section { padding:85px 0; }.site-shell .offers-heading { align-items:flex-start; flex-direction:column; gap:24px; }.site-shell .offer-grid { grid-template-columns:1fr; margin-top:45px; }.site-shell .offer-card-dossier { grid-column:auto; }.site-shell .offer-card { min-height:330px; } }
 
@@ -285,3 +285,9 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .offer-card,
   .site-shell .pricing-card { backdrop-filter:blur(14px); }
 }
+
+/* External app entry points use the same visual treatment as the former CTA buttons. */
+.site-shell .offer-footer a { background:transparent; border:0; color:#1564dd; cursor:pointer; font-size:12px; font-weight:800; line-height:1.3; padding:0; text-align:right; text-decoration:none; }
+.site-shell .offer-footer a span { font-size:14px; margin-left:5px; }
+.site-shell .offer-card-dossier .offer-footer a { color:#fff; }
+.site-shell .cta-section > .section-wrap > .button { margin:31px auto 15px; }

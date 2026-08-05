@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+const COURTIA_APP_URL = "https://courtia-copilote.benjaminpoisson17.chatgpt.site/";
+
 const plans = [
   {
     number: "01",
@@ -74,7 +76,7 @@ export default function TarifsPage() {
       <section className="pricing-section">
         <div className="section-wrap"><div className="pricing-intro" data-pricing-reveal><span className="eyebrow eyebrow-light">Une progression claire</span><h2>Commencez par comprendre.<br /><em>Avancez avec les bons documents.</em></h2><p>Chaque parcours Courtia correspond à une étape de votre projet immobilier. Vous gardez la main du début à la fin.</p></div>
           <div className="pricing-grid">
-            {plans.map((plan) => <article className={`pricing-card ${plan.tone}`} data-pricing-reveal key={plan.number}><div className="pricing-card-top"><span>{plan.number}</span><b>{plan.label}</b></div><h3>{plan.title}</h3><div className="pricing-price">{plan.price}</div>{plan.priceNote && <div className="pricing-price-note">{plan.priceNote}</div>}<p>{plan.description}</p><ul>{plan.items.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul><a className="pricing-action" href="/#contact">{plan.action}<span>↗</span></a></article>)}
+            {plans.map((plan) => <article className={`pricing-card ${plan.tone}`} data-pricing-reveal key={plan.number}><div className="pricing-card-top"><span>{plan.number}</span><b>{plan.label}</b></div><h3>{plan.title}</h3><div className="pricing-price">{plan.price}</div>{plan.priceNote && <div className="pricing-price-note">{plan.priceNote}</div>}<p>{plan.description}</p><ul>{plan.items.map((item) => <li key={item}><span>✓</span>{item}</li>)}</ul><a className="pricing-action" href={COURTIA_APP_URL}>{plan.action}<span>↗</span></a></article>)}
           </div>
         </div>
       </section>
