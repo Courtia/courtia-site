@@ -57,7 +57,6 @@ export default function Home() {
           <button onClick={() => scrollToId("app")}>L&apos;application</button>
           <a href="/tarifs">Tarifs</a>
         </nav>
-        <a className="nav-pro" href="/professionnels">Courtia Pro <span>↗</span></a>
       </header>
 
       <section className="hero" id="top">
@@ -70,8 +69,7 @@ export default function Home() {
             <h1>Avant la banque,<br /><em>il y a Courtia.</em></h1>
             <p>Courtia est votre copilote financier : l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et présenter le projet que votre banquier attend.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href={COURTIA_APP_URL}>Je suis particulier <span>↗</span></a>
-              <a className="button button-glass" href="/professionnels">Courtia Pro <span>↗</span></a>
+              <a className="button button-primary" href={COURTIA_APP_URL}>Créer mon compte <span>↗</span></a>
             </div>
             <div className="hero-meta"><span><b>10</b> axes analysés</span><i /> <span><b>&lt; 5 min</b> pour comprendre</span><i /> <span><b>100%</b> confidentiel</span></div>
           </div>
@@ -163,7 +161,7 @@ export default function Home() {
 
       <section className="cta-section" id="contact"><div className="cta-glow" /><div className="section-wrap cta-inner" data-reveal><span className="eyebrow">Avant la banque, il y a Courtia</span><h2>Donnez un temps d&apos;avance<br /><em>à votre projet.</em></h2><p>Créez votre compte et découvrez votre profil en quelques minutes.</p><a className="button button-primary" href={COURTIA_APP_URL}>Commencer <span>↗</span></a><small>Aucun engagement · Données protégées · Parcours confidentiel</small></div></section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Pour vous</a><a href="#fonctionnalites">La plateforme</a><a href="#app">L&apos;application</a><a href="/professionnels">Courtia Pro ↗</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Pour vous</a><a href="#fonctionnalites">La plateforme</a><a href="#app">L&apos;application</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
     </main>
   );
 }
