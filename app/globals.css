@@ -547,6 +547,7 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 }
 .site-shell .nav-links button,
 .site-shell .nav-links a {
+  font-size:13px;
   transition:background .22s,color .22s,box-shadow .22s;
   white-space:nowrap;
 }
@@ -561,6 +562,7 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   box-shadow:0 8px 20px -8px rgba(95,132,22,.68),inset 0 1px 0 rgba(255,255,255,.4);
   color:#17340c;
   flex:0 0 auto;
+  font-size:11px;
   white-space:nowrap;
 }
 .site-shell .nav-pro:hover {
@@ -574,9 +576,10 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .nav-links { gap:0; margin-right:8px; min-width:0; }
   .site-shell .nav-links button,
   .site-shell .nav-links a { font-size:11px; padding:8px 8px; }
-  .site-shell .nav-pro { font-size:9px; gap:7px; padding:9px 11px; }
+  .site-shell .nav-pro { font-size:10px; gap:7px; padding:9px 11px; }
 }
 
 @media (max-width:680px) {
   .site-shell .topbar { left:12px; margin-left:0; margin-right:0; right:auto; transform:none; width:calc(100% - 24px); }
+  .site-shell .nav-pro { font-size:10px; }
 }
