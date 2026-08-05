@@ -57,6 +57,7 @@ export default function Home() {
           <button onClick={() => scrollToId("app")}>L&apos;application</button>
           <a href="/tarifs">Tarifs</a>
         </nav>
+        <a className="nav-pro" href="/professionnels">Espace Pro <span>↗</span></a>
       </header>
 
       <section className="hero" id="top">
