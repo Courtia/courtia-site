@@ -529,3 +529,41 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 @media (prefers-reduced-motion:reduce) {
   .site-shell:before { animation:none; }
 }
+
+/* Header integration: keep the glass rail connected to the app-like surface. */
+.site-shell .topbar {
+  background:linear-gradient(110deg,rgba(255,255,255,.72),rgba(247,252,255,.46) 55%,rgba(228,246,239,.56));
+  border-color:rgba(255,255,255,.9);
+  box-shadow:var(--ref-shadow),inset 0 1px 0 rgba(255,255,255,.72);
+}
+.site-shell .nav-links button,
+.site-shell .nav-links a {
+  transition:background .22s,color .22s,box-shadow .22s;
+  white-space:nowrap;
+}
+.site-shell .nav-links button:hover,
+.site-shell .nav-links a:hover {
+  background:rgba(255,255,255,.72);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.56),0 5px 14px rgba(14,58,82,.08);
+}
+.site-shell .nav-pro {
+  background:linear-gradient(180deg,#a5d84c,#7fae2d);
+  border:1px solid rgba(255,255,255,.72);
+  box-shadow:0 8px 20px -8px rgba(95,132,22,.68),inset 0 1px 0 rgba(255,255,255,.4);
+  color:#17340c;
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.site-shell .nav-pro:hover {
+  background:linear-gradient(180deg,#b7e866,#8fbe38);
+  color:#17340c;
+}
+
+@media (max-width:900px) and (min-width:681px) {
+  .site-shell .topbar { left:18px; right:18px; padding-left:16px; padding-right:10px; }
+  .site-shell .brand-logo { width:100px; }
+  .site-shell .nav-links { gap:0; margin-right:8px; }
+  .site-shell .nav-links button,
+  .site-shell .nav-links a { font-size:11px; padding:8px 8px; }
+  .site-shell .nav-pro { font-size:9px; gap:7px; padding:9px 11px; }
+}
