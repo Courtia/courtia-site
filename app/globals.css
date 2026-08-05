@@ -539,7 +539,7 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   left:0;
   margin-left:auto;
   margin-right:auto;
-  max-width:1320px;
+  max-width:1200px;
   min-width:0;
   right:0;
   transform:none;
