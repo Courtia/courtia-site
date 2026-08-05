@@ -71,7 +71,7 @@ export default function Home() {
           aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
           onClick={() => setMobileMenuOpen((open) => !open)}
         >
-          <span aria-hidden="true">×</span>
+          <span aria-hidden="true"><i /><i /><i /></span>
         </button>
         <button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut">
           <img className="brand-logo brand-logo-inverse" src="/courtia-logo.png" alt="Courtia" />
