@@ -657,5 +657,8 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .mobile-menu-pro { background:rgba(10,67,87,.9) !important; box-shadow:0 10px 24px -12px rgba(10,67,87,.7); color:white !important; }
   .site-shell .mobile-menu-pro span { color:#b8e963 !important; }
   .site-shell .mobile-menu-footer { color:var(--ref-text-faint); font-size:11px; margin-top:auto; padding:0 14px; }
+  .site-shell .note-top { align-items:center; border-radius:50%; font-size:0; gap:0; height:52px; justify-content:center; padding:0; right:3px; top:8px; width:52px; }
+  .site-shell .note-top .mini-dot { margin-bottom:3px; }
+  .site-shell .note-top b { font-size:9px; margin-left:0; }
   .site-shell .nav-pro { font-size:10px; }
 }
