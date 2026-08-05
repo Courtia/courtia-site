@@ -570,6 +570,10 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   color:#17340c;
 }
 
+.mobile-menu-toggle,
+.mobile-menu-backdrop,
+.mobile-menu { display:none; }
+
 @media (max-width:900px) and (min-width:681px) {
   .site-shell .topbar { left:18px; margin-left:0; margin-right:0; right:auto; transform:none; width:calc(100% - 36px); padding-left:16px; padding-right:10px; }
   .site-shell .brand-logo { width:100px; }
@@ -580,6 +584,78 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 }
 
 @media (max-width:680px) {
-  .site-shell .topbar { left:12px; margin-left:0; margin-right:0; right:auto; transform:none; width:calc(100% - 24px); }
+  body.mobile-menu-open { overflow:hidden; }
+  .site-shell .topbar { justify-content:center; left:12px; margin-left:0; margin-right:0; right:auto; transform:none; width:calc(100% - 24px); }
+  .site-shell .topbar .brand { margin:0 auto; }
+  .site-shell .mobile-menu-toggle {
+    align-items:center;
+    background:rgba(255,255,255,.54);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:50%;
+    color:var(--ref-brand-deep);
+    display:flex;
+    height:36px;
+    justify-content:center;
+    left:12px;
+    padding:0;
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:36px;
+    z-index:2;
+  }
+  .site-shell .mobile-menu-toggle span { font-size:27px; font-weight:300; line-height:1; margin-top:-2px; }
+  .site-shell .topbar .nav-pro { display:none; }
+  .site-shell .mobile-menu-backdrop {
+    background:rgba(8,33,48,.34);
+    border:0;
+    display:block;
+    inset:0;
+    opacity:0;
+    pointer-events:none;
+    position:fixed;
+    transition:opacity .3s ease;
+    z-index:20;
+  }
+  .site-shell .mobile-menu-backdrop.is-visible { opacity:1; pointer-events:auto; }
+  .site-shell .mobile-menu {
+    backdrop-filter:blur(28px) saturate(150%);
+    background:linear-gradient(155deg,rgba(249,253,255,.96),rgba(222,244,241,.94));
+    border:1px solid rgba(255,255,255,.92);
+    border-left:0;
+    border-radius:0 28px 28px 0;
+    box-shadow:18px 0 45px rgba(28,75,96,.2);
+    display:flex;
+    flex-direction:column;
+    inset:0 auto 0 0;
+    max-width:360px;
+    padding:28px 22px 22px;
+    pointer-events:none;
+    transform:translateX(-105%);
+    transition:transform .34s cubic-bezier(.2,.75,.25,1),visibility .34s;
+    visibility:hidden;
+    width:86vw;
+    z-index:30;
+  }
+  .site-shell .mobile-menu.is-open { pointer-events:auto; transform:none; visibility:visible; }
+  .site-shell .mobile-menu-header { align-items:center; display:flex; justify-content:space-between; }
+  .site-shell .mobile-menu-header strong { color:var(--ref-brand-deep); display:block; font-size:27px; letter-spacing:-.06em; margin-top:5px; }
+  .site-shell .mobile-menu-overline,
+  .site-shell .mobile-menu-section-label { color:var(--ref-brand); display:block; font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+  .site-shell .mobile-menu-close { align-items:center; background:rgba(255,255,255,.58); border:1px solid rgba(255,255,255,.92); border-radius:50%; color:var(--ref-brand-deep); display:flex; font-size:27px; font-weight:300; height:36px; justify-content:center; line-height:1; padding:0 0 3px; width:36px; }
+  .site-shell .mobile-menu-nav { display:flex; flex-direction:column; gap:3px; margin-top:43px; }
+  .site-shell .mobile-menu-nav button,
+  .site-shell .mobile-menu-nav a { align-items:center; background:transparent; border:0; border-radius:14px; color:var(--ref-brand-deep); display:flex; font-size:17px; font-weight:600; justify-content:space-between; padding:12px 14px; text-align:left; text-decoration:none; }
+  .site-shell .mobile-menu-nav button:hover,
+  .site-shell .mobile-menu-nav a:hover { background:rgba(255,255,255,.62); }
+  .site-shell .mobile-menu-nav button span,
+  .site-shell .mobile-menu-nav a span { color:var(--ref-teal); font-size:18px; }
+  .site-shell .mobile-menu-section-label { margin:0 14px 7px; }
+  .site-shell .mobile-menu-account { background:linear-gradient(180deg,var(--ref-accent),var(--ref-accent-ink)) !important; box-shadow:0 9px 20px -10px rgba(95,132,22,.72); color:#17340c !important; margin-top:7px; }
+  .site-shell .mobile-menu-account span { color:#17340c !important; }
+  .site-shell .mobile-menu-divider { background:rgba(39,96,111,.14); height:1px; margin:19px 14px 22px; }
+  .site-shell .mobile-menu-pro { background:rgba(10,67,87,.9) !important; box-shadow:0 10px 24px -12px rgba(10,67,87,.7); color:white !important; }
+  .site-shell .mobile-menu-pro span { color:#b8e963 !important; }
+  .site-shell .mobile-menu-footer { color:var(--ref-text-faint); font-size:11px; margin-top:auto; padding:0 14px; }
   .site-shell .nav-pro { font-size:10px; }
 }

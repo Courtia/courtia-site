@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const COURTIA_APP_URL = "https://courtia-copilote.benjaminpoisson17.chatgpt.site/";
 
@@ -11,6 +11,8 @@ const features = [
 ];
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>("[data-reveal]");
     const hero = document.querySelector<HTMLElement>(".hero");
@@ -41,13 +43,36 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle("mobile-menu-open", mobileMenuOpen);
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setMobileMenuOpen(false);
+    }
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.classList.remove("mobile-menu-open");
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [mobileMenuOpen]);
+
   function scrollToId(id: string) {
+    setMobileMenuOpen(false);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
     <main className="site-shell">
       <header className="topbar">
+        <button
+          className="mobile-menu-toggle"
+          type="button"
+          aria-controls="mobile-navigation"
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          <span aria-hidden="true">×</span>
+        </button>
         <button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut">
           <img className="brand-logo brand-logo-inverse" src="/courtia-logo.png" alt="Courtia" />
         </button>
@@ -59,6 +84,37 @@ export default function Home() {
         </nav>
         <a className="nav-pro" href="/professionnels">Espace Pro <span>↗</span></a>
       </header>
+
+      <button
+        className={`mobile-menu-backdrop${mobileMenuOpen ? " is-visible" : ""}`}
+        type="button"
+        aria-label="Fermer le menu"
+        aria-hidden={!mobileMenuOpen}
+        onClick={() => setMobileMenuOpen(false)}
+      />
+      <aside
+        className={`mobile-menu${mobileMenuOpen ? " is-open" : ""}`}
+        id="mobile-navigation"
+        aria-label="Menu Courtia"
+        aria-hidden={!mobileMenuOpen}
+      >
+        <div className="mobile-menu-header">
+          <div><span className="mobile-menu-overline">Navigation</span><strong>Courtia</strong></div>
+          <button className="mobile-menu-close" type="button" aria-label="Fermer le menu" onClick={() => setMobileMenuOpen(false)}>×</button>
+        </div>
+        <nav className="mobile-menu-nav">
+          <span className="mobile-menu-section-label">Courtia Particulier</span>
+          <button type="button" onClick={() => scrollToId("particuliers")}>Pour vous <span>↗</span></button>
+          <button type="button" onClick={() => scrollToId("fonctionnalites")}>La plateforme <span>↗</span></button>
+          <button type="button" onClick={() => scrollToId("app")}>L&apos;application <span>↗</span></button>
+          <a href="/tarifs" onClick={() => setMobileMenuOpen(false)}>Tarifs <span>↗</span></a>
+          <a className="mobile-menu-account" href={COURTIA_APP_URL} onClick={() => setMobileMenuOpen(false)}>Créer mon compte <span>↗</span></a>
+          <span className="mobile-menu-divider" />
+          <span className="mobile-menu-section-label">Courtia Pro</span>
+          <a className="mobile-menu-pro" href="/professionnels" onClick={() => setMobileMenuOpen(false)}>Espace Pro <span>↗</span></a>
+        </nav>
+        <small className="mobile-menu-footer">Le crédit avec un temps d&apos;avance.</small>
+      </aside>
 
       <section className="hero" id="top">
         <div className="hero-grid" />
