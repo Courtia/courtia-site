@@ -675,3 +675,90 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .mobile-menu-footer { color:var(--ref-text-faint); font-size:11px; margin-top:auto; padding:0 14px; }
   .site-shell .nav-pro { font-size:10px; }
 }
+
+/* Three-step reassurance section for the landing page. */
+.site-shell .how-it-works-section {
+  background:rgba(255,255,255,.2);
+  border-bottom:1px solid rgba(255,255,255,.42);
+  border-top:1px solid rgba(255,255,255,.42);
+  overflow:hidden;
+  padding:115px 0 120px;
+}
+.site-shell .how-heading {
+  align-items:end;
+  display:flex;
+  gap:48px;
+  justify-content:space-between;
+}
+.site-shell .how-heading h2 {
+  color:var(--ref-brand-deep);
+  font-size:clamp(42px,5vw,67px);
+  line-height:.98;
+  margin:17px 0 0;
+}
+.site-shell .how-heading h2 em {
+  background:linear-gradient(105deg,var(--ref-teal),var(--ref-accent));
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  font-style:normal;
+}
+.site-shell .how-heading > p {
+  color:var(--ref-text-soft);
+  font-size:14px;
+  line-height:1.65;
+  margin:0 0 5px;
+  max-width:310px;
+}
+.site-shell .how-grid {
+  display:grid;
+  gap:17px;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:68px;
+}
+.site-shell .how-card {
+  background:var(--ref-glass);
+  border:1px solid var(--ref-border);
+  border-radius:24px;
+  box-shadow:var(--ref-shadow);
+  display:flex;
+  flex-direction:column;
+  min-height:320px;
+  overflow:hidden;
+  padding:28px;
+  position:relative;
+  transition:transform .35s,box-shadow .35s;
+}
+.site-shell .how-card:hover {
+  box-shadow:0 28px 55px rgba(28,63,83,.15);
+  transform:translateY(-7px);
+}
+.site-shell .how-card-top { align-items:center; display:flex; justify-content:space-between; }
+.site-shell .how-number { color:var(--ref-brand); font-size:11px; font-weight:800; letter-spacing:.12em; }
+.site-shell .how-icon { align-items:center; background:rgba(255,255,255,.72); border:1px solid var(--ref-border); border-radius:50%; color:var(--ref-teal); display:flex; font-size:15px; height:36px; justify-content:center; width:36px; }
+.site-shell .how-card h3 { color:var(--ref-brand-deep); font-size:27px; line-height:1; margin:68px 0 12px; }
+.site-shell .how-card p { color:var(--ref-text-soft); font-size:14px; line-height:1.65; margin:0; max-width:300px; }
+.site-shell .how-card-note { color:var(--ref-text-faint); font-size:11px; font-weight:700; margin-top:auto; padding-top:28px; }
+.site-shell .how-card-highlight { background:rgba(178,217,90,.24); }
+.site-shell .how-card-highlight .how-icon { color:var(--ref-accent-ink); }
+.site-shell .how-card-final { background:linear-gradient(145deg,var(--ref-brand-deep),var(--ref-teal)); color:white; }
+.site-shell .how-card-final .how-number,
+.site-shell .how-card-final .how-icon { color:#d5f28e; }
+.site-shell .how-card-final .how-icon { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.26); }
+.site-shell .how-card-final h3 { color:white; }
+.site-shell .how-card-final p { color:rgba(255,255,255,.78); }
+.site-shell .how-card-final .how-card-note { color:rgba(255,255,255,.62); }
+
+@media (max-width:980px) {
+  .site-shell .how-grid { grid-template-columns:1fr 1fr; }
+  .site-shell .how-card-final { grid-column:1 / -1; }
+}
+@media (max-width:680px) {
+  .site-shell .how-it-works-section { padding:85px 0; }
+  .site-shell .how-heading { align-items:flex-start; flex-direction:column; gap:24px; }
+  .site-shell .how-heading > p { font-size:15px; }
+  .site-shell .how-grid { grid-template-columns:1fr; margin-top:45px; }
+  .site-shell .how-card-final { grid-column:auto; }
+  .site-shell .how-card { min-height:290px; }
+  .site-shell .how-card h3 { font-size:29px; margin-top:55px; }
+}
