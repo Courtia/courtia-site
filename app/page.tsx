@@ -108,7 +108,7 @@ export default function Home() {
           <button type="button" onClick={() => scrollToId("fonctionnalites")}>La plateforme <span>↗</span></button>
           <button type="button" onClick={() => scrollToId("app")}>L&apos;application <span>↗</span></button>
           <a href="/tarifs" onClick={() => setMobileMenuOpen(false)}>Tarifs <span>↗</span></a>
-          <a className="mobile-menu-account" href={COURTIA_APP_URL} onClick={() => setMobileMenuOpen(false)}>Créer mon compte <span>↗</span></a>
+          <a className="mobile-menu-account" href={COURTIA_APP_URL} onClick={() => setMobileMenuOpen(false)}>Commencer <span>↗</span></a>
           <span className="mobile-menu-divider" />
           <span className="mobile-menu-section-label">Courtia Pro</span>
           <a className="mobile-menu-pro" href="/professionnels" onClick={() => setMobileMenuOpen(false)}>Espace Pro <span>↗</span></a>
@@ -126,7 +126,7 @@ export default function Home() {
             <h1>Avant la banque,<br /><em>il y a Courtia.</em></h1>
             <p>Courtia est votre copilote financier : l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et présenter le projet que votre banquier attend.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href={COURTIA_APP_URL}>Créer mon compte <span>↗</span></a>
+              <a className="button button-primary" href={COURTIA_APP_URL}>Commencer <span>↗</span></a>
             </div>
             <div className="hero-meta"><span><b>10</b> axes analysés</span><i /> <span><b>&lt; 5 min</b> pour comprendre</span><i /> <span><b>100%</b> confidentiel</span></div>
           </div>
