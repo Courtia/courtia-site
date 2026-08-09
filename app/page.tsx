@@ -12,6 +12,7 @@ const features = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const items = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -44,6 +45,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    function updateScrollState() {
+      setIsScrolled(window.scrollY > 24);
+    }
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  useEffect(() => {
     document.body.classList.toggle("mobile-menu-open", mobileMenuOpen);
     function closeOnEscape(event: KeyboardEvent) {
       if (event.key === "Escape") setMobileMenuOpen(false);
@@ -62,7 +72,7 @@ export default function Home() {
 
   return (
     <main className="site-shell">
-      <header className="topbar">
+      <header className={`topbar${isScrolled ? " is-scrolled" : ""}`}>
         <button
           className="mobile-menu-toggle"
           type="button"
@@ -82,6 +92,7 @@ export default function Home() {
           <button onClick={() => scrollToId("app")}>L&apos;application</button>
           <a href="/tarifs">Tarifs</a>
         </nav>
+        <a className="nav-start" href={COURTIA_APP_URL} aria-hidden={!isScrolled} tabIndex={isScrolled ? 0 : -1}>Commencer <span>↗</span></a>
         <a className="nav-pro" href="/professionnels">Espace Pro <span>↗</span></a>
       </header>
 

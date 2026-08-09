@@ -871,3 +871,46 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .pro-launch-badge { font-size:12px; padding:10px 16px; }
   .pro-launch-button { font-size:13px; padding:16px 21px; }
 }
+
+/* Bring the primary action into the glass header after leaving the hero. */
+.site-shell .nav-start {
+  align-items:center;
+  background:linear-gradient(180deg,#c6f03a,#8fc90f);
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:100px;
+  box-shadow:0 10px 24px -8px rgba(123,178,16,.42),inset 0 1px 0 rgba(255,255,255,.42);
+  color:#17340c;
+  display:none;
+  flex:0 0 auto;
+  font-size:14px;
+  font-weight:800;
+  gap:9px;
+  padding:11px 17px;
+  white-space:nowrap;
+}
+.site-shell .nav-start:hover {
+  background:linear-gradient(180deg,#d5f75a,#a5dc22);
+  color:#17340c;
+  transform:translateY(-2px);
+}
+.site-shell .topbar.is-scrolled .nav-start {
+  animation:nav-start-enter .22s ease-out both;
+  display:inline-flex;
+}
+.site-shell .nav-start span { font-size:17px; line-height:.7; }
+@keyframes nav-start-enter {
+  from { opacity:0; transform:translateY(-5px) scale(.96); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+@media (max-width:680px) {
+  .site-shell .topbar.is-scrolled .nav-start {
+    font-size:10px;
+    gap:6px;
+    padding:9px 12px;
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+  .site-shell .nav-start span { font-size:14px; }
+}
