@@ -991,18 +991,18 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   white-space:nowrap;
 }
 .pro-page .pro-back {
-  background:rgba(255,255,255,.42);
-  border:1px solid rgba(255,255,255,.75);
+  background:rgba(7,32,47,.48);
+  border:1px solid rgba(255,255,255,.62);
   border-radius:100px;
-  color:#4d6b7d;
+  color:#f5fbfd;
   flex:0 0 auto;
-  font-size:13px;
-  font-weight:600;
-  padding:9px 12px;
+  font-size:15px;
+  font-weight:700;
+  padding:10px 16px;
   white-space:nowrap;
 }
-.pro-page .pro-topbar-actions { flex:0 0 auto; }
-.pro-page .pro-back span { color:#2e8b93; }
+.pro-page .pro-topbar-actions { flex:0 0 auto; margin-left:16px; }
+.pro-page .pro-back span { color:#d9fff2; }
 
 /* Keep both header actions compact and on one line at every desktop width. */
 .pro-page .pro-topbar .pro-topbar-actions .pro-login,

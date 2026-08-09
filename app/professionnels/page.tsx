@@ -74,7 +74,7 @@ export default function ProfessionalsPage() {
         <nav><a href="#pro-feature">La solution</a><a href="#parcours">Le parcours</a><a href="#contact">Contact</a></nav>
         <div className="pro-topbar-actions">
           <a className="pro-login" href={COURTIA_PRO_URL}>Se connecter <span>↗</span></a>
-          <a className="pro-back" href="/">Pour les particuliers <span>↗</span></a>
+          <a className="pro-back" href="/">Espace particulier <span>↗</span></a>
         </div>
       </header>
 
