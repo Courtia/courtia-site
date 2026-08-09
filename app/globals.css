@@ -872,6 +872,25 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .pro-launch-button { font-size:13px; padding:16px 21px; }
 }
 
+/* Reserve a clean footer area for mosaic labels and the attestation action. */
+.site-shell .mosaic-card {
+  display:flex;
+  flex-direction:column;
+}
+.site-shell .mosaic-card label {
+  bottom:auto;
+  left:auto;
+  margin-top:auto;
+  position:static;
+}
+.site-shell .mosaic-attestation button {
+  align-self:center;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:max-content;
+}
+
 /* Bring the primary action into the glass header after leaving the hero. */
 .site-shell .nav-start {
   align-items:center;
