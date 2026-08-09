@@ -779,6 +779,14 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .hero-meta { font-size:12px; }
 }
 
+/* Make the experience marker more legible beside the section heading. */
+.site-shell .screens-brand img { height:40px; width:185px; }
+.site-shell .screens-brand span { color:#426b7f; font-size:16px; font-weight:600; }
+@media (max-width:680px) {
+  .site-shell .screens-brand img { height:35px; width:162px; }
+  .site-shell .screens-brand span { font-size:14px; }
+}
+
 /* Professional audience modules inspired by the new Courtia Pro narrative. */
 .pro-audience-section {
   background:linear-gradient(135deg,#050c19 0%,#08182a 57%,#073c3a 100%);
