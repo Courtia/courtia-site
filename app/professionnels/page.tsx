@@ -8,6 +8,37 @@ const proSteps = [
   ["03", "Vous suivez l’avancée", "Visualisez les étapes franchies et arrivez mieux préparé à la vente."],
 ];
 
+const proAudienceModules = [
+  {
+    icon: "⌂",
+    label: "Agent immobilier",
+    text: "Qualifiez vos acquéreurs et avancez avec des dossiers conformes LCBFT.",
+    action: "Découvrir",
+    tone: "agent",
+  },
+  {
+    icon: "▥",
+    label: "Banquier",
+    text: "Recevez des dossiers emprunteurs pré-qualifiés, prêts à être étudiés.",
+    action: "Découvrir",
+    tone: "banker",
+  },
+  {
+    icon: "⚖",
+    label: "Notaire",
+    text: "Retrouvez des dossiers acheteurs préparés, avec la conformité intégrée.",
+    action: "En savoir plus",
+    tone: "notary",
+  },
+  {
+    icon: "↗",
+    label: "Courtier",
+    text: "Automatisez la qualification et suivez chaque projet depuis votre pipeline.",
+    action: "En savoir plus",
+    tone: "broker",
+  },
+];
+
 const COURTIA_PRO_URL = "https://courtia-espace-pro.benjaminpoisson17.chatgpt.site";
 
 export default function ProfessionalsPage() {
@@ -55,11 +86,51 @@ export default function ProfessionalsPage() {
         </div>
       </section>
 
+      <section className="pro-audience-section" id="pro-audience">
+        <div className="pro-page-grid" /><div className="pro-page-glow pro-audience-glow-a" /><div className="pro-page-glow pro-audience-glow-b" />
+        <div className="section-wrap">
+          <div className="pro-audience-heading" data-pro-reveal>
+            <span className="eyebrow">Courtia pour les professionnels</span>
+            <h2>Professionnels de l&apos;immobilier,<br /><em>équipez-vous avec Courtia.</em></h2>
+            <p>Recevez des prospects qualifiés, suivez votre pipeline et soyez conformes.</p>
+          </div>
+          <div className="pro-audience-grid">
+            {proAudienceModules.map((module) => (
+              <article className={`pro-audience-card pro-audience-card-${module.tone}`} data-pro-reveal key={module.label}>
+                <span className="pro-audience-icon" aria-hidden="true">{module.icon}</span>
+                <h3>{module.label}</h3>
+                <p>{module.text}</p>
+                <a href="#pro-launch">{module.action} <span aria-hidden="true">→</span></a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="pro-intro-section" id="pro-feature"><div className="section-wrap pro-intro-wrap" data-pro-reveal><div><span className="eyebrow eyebrow-light">Le constat</span><h2>La vraie clé de la vente,<br /><em>c&apos;est un dossier solide.</em></h2></div><div className="pro-intro-copy"><p>Vous ne cherchez pas simplement des visiteurs. Vous cherchez des acquéreurs capables d&apos;aller au bout de leur projet.</p><p>Courtia prépare leur profil avant la vente pour créer des échanges plus simples, des offres plus crédibles et moins de temps perdu.</p></div></div><div className="section-wrap pro-quote" data-pro-reveal><span>“</span><p>Avant la vente,<br /><em>il y a Courtia.</em></p><b>Le réflexe des projets prêts.</b></div></section>
 
       <section className="pro-path-section" id="parcours"><div className="section-wrap"><div className="pro-path-heading" data-pro-reveal><span className="eyebrow">Un parcours simple</span><h2>Faites passer votre acquéreur<br /><em>par Courtia.</em></h2><p>Un outil de préparation qui s&apos;intègre naturellement dans votre parcours de vente.</p></div><div className="pro-step-grid">{proSteps.map(([number, title, text]) => <article key={number} data-pro-reveal><span>{number}</span><h3>{title}</h3><p>{text}</p><i>↗</i></article>)}</div></div></section>
 
       <section className="pro-benefit-section"><div className="section-wrap pro-benefit-wrap"><div className="pro-benefit-card" data-pro-reveal><span className="eyebrow">Votre espace pro</span><h3>Du premier contact<br /><em>à l&apos;offre préparée.</em></h3><div className="pro-progress-label"><span>Parcours d&apos;Alexandre</span><b>3 / 4</b></div><div className="pro-progress"><i /></div><div className="pro-benefit-tags"><span className="done">✓ Projet</span><span className="done">✓ Diagnostic</span><span className="done">✓ Attestation</span><span>4 Offre</span></div><div className="pro-note"><span>✦</span><p><b>Bon moment pour relancer.</b><br />Alexandre vient de terminer son diagnostic.</p></div></div><div className="pro-benefit-copy" data-pro-reveal><span className="eyebrow eyebrow-light">Courtia Pro</span><h2>Plus de visibilité.<br /><em>Moins de friction.</em></h2><div className="pro-benefit-list"><div><span>01</span><p><b>Des acquéreurs mieux préparés</b> avant la visite et l&apos;offre.</p></div><div><span>02</span><p><b>Un suivi simple</b> de chaque projet depuis votre espace.</p></div><div><span>03</span><p><b>Des ventes sécurisées</b> par des échanges plus crédibles.</p></div></div></div></div></section>
+
+      <section className="pro-bank-section" id="pro-bank">
+        <div className="pro-page-grid" /><div className="pro-page-glow pro-bank-glow-a" /><div className="pro-page-glow pro-bank-glow-b" />
+        <div className="section-wrap pro-bank-inner" data-pro-reveal>
+          <span className="eyebrow pro-bank-eyebrow"><span aria-hidden="true">▥</span> Espace banquier</span>
+          <h2>Recevez des dossiers<br /><em>emprunteurs pré-qualifiés.</em></h2>
+          <p>Les emprunteurs Courtia structurent leur profil avec l&apos;IA, obtiennent un score de finançabilité sur 10 axes et vous partagent un dossier complet via un portail sécurisé. Plus de paperasse, que des dossiers exploitables.</p>
+          <a className="pro-launch-button" href="#pro-launch">Être notifié du lancement <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section className="pro-launch-section" id="pro-launch">
+        <div className="section-wrap pro-launch-inner" data-pro-reveal>
+          <span className="pro-launch-badge"><span aria-hidden="true">◷</span> Lancement prévu T4 2026</span>
+          <h2>Soyez parmi les premiers informés</h2>
+          <p>Le portail banquier Courtia est en cours de développement. Inscrivez-vous pour être notifié dès l&apos;ouverture et bénéficier d&apos;un accès prioritaire.</p>
+          <a className="pro-launch-button pro-launch-button-dark" href="#contact">Être notifié du lancement <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
 
       <section className="pro-cta-section" id="contact"><div className="pro-cta-glow" /><div className="section-wrap pro-cta-inner" data-pro-reveal><span className="eyebrow">Courtia Pro</span><h2>Faites avancer<br /><em>vos ventes.</em></h2><p>Découvrez comment Courtia peut s&apos;intégrer à votre parcours acquéreur.</p><form onSubmit={handleStart}><input type="email" required placeholder="Votre adresse email professionnelle" aria-label="Votre adresse email professionnelle" /><button className="button button-primary" type="submit">{sent ? "Demande envoyée ✓" : "Échanger avec nous"} <span>↗</span></button></form><small>Réponse sous 24h · Démonstration personnalisée</small></div></section>
 
