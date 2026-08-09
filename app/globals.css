@@ -735,7 +735,7 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   transform:translateY(-7px);
 }
 .site-shell .how-card-top { align-items:center; display:flex; justify-content:space-between; }
-.site-shell .how-number { color:var(--ref-brand); font-size:11px; font-weight:800; letter-spacing:.12em; }
+.site-shell .how-number { color:var(--ref-brand); font-size:20px; font-weight:800; letter-spacing:.12em; line-height:1; }
 .site-shell .how-icon { align-items:center; background:rgba(255,255,255,.72); border:1px solid var(--ref-border); border-radius:50%; color:var(--ref-teal); display:flex; font-size:15px; height:36px; justify-content:center; width:36px; }
 .site-shell .how-card h3 { color:var(--ref-brand-deep); font-size:27px; line-height:1; margin:68px 0 12px; }
 .site-shell .how-card p { color:var(--ref-text-soft); font-size:14px; line-height:1.65; margin:0; max-width:300px; }
