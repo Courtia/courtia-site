@@ -939,3 +939,89 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 .site-shell .mosaic-attestation button,
 .site-shell .offer-footer button,
 .site-shell .offer-footer a { font-size:14px; }
+
+/* Unify the professional landing header with the private landing glass rail. */
+.pro-page .pro-topbar {
+  align-items:center;
+  background:linear-gradient(110deg,rgba(255,255,255,.72),rgba(247,252,255,.46) 55%,rgba(228,246,239,.56));
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:100px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.72);
+  box-sizing:border-box;
+  color:#0d2f43;
+  height:72px;
+  left:0;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:1080px;
+  min-width:0;
+  padding:0 max(32px, calc((100vw - 1180px)/2 + 32px));
+  position:fixed;
+  right:0;
+  top:14px;
+  width:calc(100% - 48px);
+  z-index:10;
+}
+.pro-page .pro-topbar .brand-logo-inverse { filter:none; }
+.pro-page .pro-topbar .brand-logo { width:112px; }
+.pro-page .pro-topbar nav { gap:4px; margin-left:auto; margin-right:16px; }
+.pro-page .pro-topbar nav a {
+  border-radius:100px;
+  color:#4d6b7d;
+  font-size:13px;
+  font-weight:600;
+  padding:9px 12px;
+  transition:background .22s,color .22s,box-shadow .22s;
+}
+.pro-page .pro-topbar nav a:hover {
+  background:rgba(255,255,255,.72);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.56),0 5px 14px rgba(14,58,82,.08);
+  color:#0d2f43;
+}
+.pro-page .pro-login {
+  background:#5ee1bd;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:100px;
+  box-shadow:0 10px 24px -8px rgba(31,161,131,.5),inset 0 1px 0 rgba(255,255,255,.55);
+  color:#073b31;
+  font-size:14px;
+  padding:11px 17px;
+}
+.pro-page .pro-back {
+  background:rgba(255,255,255,.42);
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:100px;
+  color:#4d6b7d;
+  font-size:13px;
+  font-weight:600;
+  padding:9px 12px;
+}
+.pro-page .pro-back span { color:#2e8b93; }
+
+@media (max-width:900px) and (min-width:681px) {
+  .pro-page .pro-topbar { left:18px; margin-left:0; margin-right:0; right:auto; padding-left:16px; padding-right:10px; width:calc(100% - 36px); }
+  .pro-page .pro-topbar nav { gap:0; margin-right:8px; min-width:0; }
+  .pro-page .pro-topbar nav a { font-size:11px; padding:8px; }
+  .pro-page .pro-login, .pro-page .pro-back { font-size:10px; padding:9px 11px; }
+}
+
+@media (max-width:680px) {
+  .pro-page .pro-topbar {
+    background:transparent;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    height:38px;
+    justify-content:center;
+    left:0;
+    padding:0;
+    right:0;
+    top:14px;
+    width:100%;
+  }
+  .pro-page .pro-topbar .brand { margin:0 auto; }
+  .pro-page .pro-topbar nav { display:none; }
+  .pro-page .pro-topbar-actions { gap:6px; position:absolute; right:12px; top:50%; transform:translateY(-50%); }
+  .pro-page .pro-login { font-size:10px; padding:9px 12px; }
+  .pro-page .pro-back { display:none; }
+}
