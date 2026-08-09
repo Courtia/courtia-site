@@ -609,18 +609,18 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
     border-radius:50%;
     color:var(--ref-brand-deep);
     display:flex;
-    height:36px;
+    height:40px;
     justify-content:center;
     left:12px;
     padding:0;
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    width:36px;
+    width:40px;
     z-index:2;
   }
-  .site-shell .mobile-menu-toggle span { display:grid; gap:4px; width:17px; margin:0; }
-  .site-shell .mobile-menu-toggle span i { display:block; width:17px; height:1.5px; border-radius:99px; background:currentColor; }
+  .site-shell .mobile-menu-toggle span { display:grid; gap:4px; width:19px; margin:0; }
+  .site-shell .mobile-menu-toggle span i { display:block; width:19px; height:2px; border-radius:99px; background:currentColor; }
   .site-shell .topbar .nav-pro { display:none; }
   .site-shell .mobile-menu-backdrop {
     background:rgba(8,33,48,.34);
