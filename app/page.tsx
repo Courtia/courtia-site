@@ -159,7 +159,7 @@ export default function Home() {
         <div className="section-wrap audience-wrap private-wrap">
           <div className="section-intro" data-reveal><span className="eyebrow eyebrow-light">Pour les particuliers</span><h2>Le bon réflexe,<br /><em>au bon moment.</em></h2></div>
           <div className="private-card-grid">
-            <article className="private-card private-card-main" data-reveal><div className="card-number">01</div><span className="audience-label">Votre projet immobilier</span><h3>Présentez le dossier que votre banquier attend.</h3><p>Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes et quoi préparer.</p><a className="text-link" href={COURTIA_APP_URL}>Découvrir mon profil <span>↗</span></a><div className="card-glow" /></article>
+            <article className="private-card private-card-main" data-reveal><span className="audience-label">Votre projet immobilier</span><h3>Présentez le dossier que votre banquier attend.</h3><p>Avant de visiter, de faire une offre ou de rencontrer votre banque, vous savez où vous en êtes et quoi préparer.</p><a className="text-link" href={COURTIA_APP_URL}>Découvrir mon profil <span>↗</span></a><div className="card-glow" /></article>
             <div className="private-proof-stack"><article className="private-proof" data-reveal><span>✦</span><div><b>Une faisabilité immédiate</b><p>Testez la viabilité de votre projet en un clic.</p></div></article><article className="private-proof" data-reveal><span>✓</span><div><b>Un dossier simplifié</b><p>Une attestation et des documents prêts à partager.</p></div></article></div>
           </div>
         </div>
