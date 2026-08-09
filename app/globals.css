@@ -766,13 +766,13 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 
 /* Keep the professional entry point vivid and distinct from the main CTA. */
 .site-shell .nav-pro {
-  background:linear-gradient(180deg,#a8edff,#43bde9);
-  box-shadow:0 10px 24px -8px rgba(35,151,201,.52),inset 0 1px 0 rgba(255,255,255,.55);
-  color:#06384f;
+  background:#5ee1bd;
+  box-shadow:0 10px 24px -8px rgba(31,161,131,.5),inset 0 1px 0 rgba(255,255,255,.55);
+  color:#073b31;
 }
 .site-shell .nav-pro:hover {
-  background:linear-gradient(180deg,#c3f4ff,#65cef2);
-  color:#06384f;
+  background:#79e8cb;
+  color:#073b31;
 }
 .site-shell .hero-meta { font-size:13px; }
 @media (max-width:680px) {
