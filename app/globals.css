@@ -787,6 +787,10 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .site-shell .screens-brand span { font-size:14px; }
 }
 
+/* Slightly stronger primary action in the public hero. */
+.site-shell .hero-actions .button-primary { font-size:16px; gap:28px; padding:18px 30px; }
+.site-shell .hero-actions .button-primary span { font-size:20px; }
+
 /* Professional audience modules inspired by the new Courtia Pro narrative. */
 .pro-audience-section {
   background:linear-gradient(135deg,#050c19 0%,#08182a 57%,#073c3a 100%);
