@@ -1004,6 +1004,13 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 .pro-page .pro-topbar-actions { flex:0 0 auto; }
 .pro-page .pro-back span { color:#2e8b93; }
 
+/* Keep both header actions compact and on one line at every desktop width. */
+.pro-page .pro-topbar .pro-topbar-actions .pro-login,
+.pro-page .pro-topbar .pro-topbar-actions .pro-back {
+  flex:0 0 auto;
+  white-space:nowrap !important;
+}
+
 @media (max-width:900px) and (min-width:681px) {
   .pro-page .pro-topbar { left:18px; margin-left:0; margin-right:0; right:auto; padding-left:16px; padding-right:10px; width:calc(100% - 36px); }
   .pro-page .pro-topbar nav { gap:0; margin-right:8px; min-width:0; }
