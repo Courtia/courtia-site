@@ -83,7 +83,7 @@ export default function TarifsPage() {
 
       <section className="pricing-note-section"><div className="section-wrap pricing-note-wrap" data-pricing-reveal><div><span className="eyebrow eyebrow-light">Le réflexe Courtia</span><h2>Vous ne payez pas<br /><em>pour vous perdre.</em></h2></div><p>Chaque étape vous donne une vision plus claire de votre profil et un document utile pour la suite. Vous avancez seulement quand vous êtes prêt.</p></div></section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="/#fonctionnalites">La plateforme</a><a href="/#app">L&apos;application</a><a href="/professionnels">Courtia Pro ↗</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="/#fonctionnalites">La plateforme</a><a href="/#app">L&apos;application</a><a href="/professionnels">Courtia Pro ↗</a><a href="/mentions-legales">Mentions légales</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
     </main>
   );
 }
