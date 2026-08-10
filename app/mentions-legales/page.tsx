@@ -1,3 +1,5 @@
+import { COURTIA_EMAIL, COURTIA_TEL_AFFICHE, COURTIA_TEL_LIEN } from "../site-config";
+
 const SOMMAIRE = [
   { id: "editeur", titre: "Éditeur du site" },
   { id: "activites", titre: "Activités réglementées et contrôle" },
@@ -153,7 +155,7 @@ export default function MentionsLegalesPage() {
         </div>
       </section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="/tarifs">Tarifs</a><a href="/professionnels">Courtia Pro ↗</a><a href="/mentions-legales">Mentions légales</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><a className="brand" href="/"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></a><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="/">Particuliers</a><a href="/tarifs">Tarifs</a><a href="/professionnels">Courtia Pro ↗</a><a href="/mentions-legales">Mentions légales</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span className="footer-contact"><a href={"mailto:" + COURTIA_EMAIL}>{COURTIA_EMAIL}</a><i /><a href={COURTIA_TEL_LIEN}>{COURTIA_TEL_AFFICHE}</a></span></div></footer>
     </main>
   );
 }

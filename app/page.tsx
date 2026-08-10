@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const COURTIA_APP_URL = "https://courtia-copilote.benjaminpoisson17.chatgpt.site/";
+import { COURTIA_APP_URL, COURTIA_EMAIL, COURTIA_TEL_AFFICHE, COURTIA_TEL_LIEN } from "./site-config";
 
 const features = [
   ["01", "Clara, votre copilote", "Une conversation simple pour comprendre votre projet, vos revenus et les points qui comptent vraiment."],
@@ -239,7 +239,7 @@ export default function Home() {
 
       <section className="cta-section" id="contact"><div className="cta-glow" /><div className="section-wrap cta-inner" data-reveal><span className="eyebrow">Avant la banque, il y a Courtia</span><h2>Donnez un temps d&apos;avance<br /><em>à votre projet.</em></h2><p>Créez votre compte et découvrez votre profil en quelques minutes.</p><a className="button button-primary" href={COURTIA_APP_URL}>Commencer <span>↗</span></a><small>Aucun engagement · Données protégées · Parcours confidentiel</small></div></section>
 
-      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Pour vous</a><a href="#fonctionnalites">La plateforme</a><a href="#app">L&apos;application</a><a href="/mentions-legales">Mentions légales</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span>Fait avec <b>✦</b> pour vos projets.</span></div></footer>
+      <footer className="footer"><div className="section-wrap footer-top"><button className="brand" onClick={() => scrollToId("top")} aria-label="Courtia — retour en haut"><img className="brand-logo" src="/courtia-logo.png" alt="Courtia" /></button><p>Le crédit avec un temps d&apos;avance.</p><nav><a href="#particuliers">Pour vous</a><a href="#fonctionnalites">La plateforme</a><a href="#app">L&apos;application</a><a href="/mentions-legales">Mentions légales</a></nav></div><div className="section-wrap footer-bottom"><span>© 2026 Courtia</span><span>RGPD · IA Act · Chiffrement</span><span className="footer-contact"><a href={"mailto:" + COURTIA_EMAIL}>{COURTIA_EMAIL}</a><i /><a href={COURTIA_TEL_LIEN}>{COURTIA_TEL_AFFICHE}</a></span></div></footer>
     </main>
   );
 }

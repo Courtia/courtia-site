@@ -1154,3 +1154,10 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   .legal-key > div { grid-template-columns:1fr; }
   .legal-note, .legal-form { padding:17px 16px; }
 }
+
+/* Coordonnées en pied de page — obligation d'accessibilité du contact */
+.footer-contact { align-items:center; display:inline-flex; gap:10px; }
+.footer-contact a { transition:color .2s; }
+.footer-contact a:hover { color:#fff; text-decoration:underline; text-underline-offset:3px; }
+.footer-contact i { background:currentColor; display:block; height:9px; opacity:.35; width:1px; }
+@media (max-width:680px) { .footer-contact { flex-wrap:wrap; gap:7px; } }
