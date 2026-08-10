@@ -12,13 +12,13 @@ export const COURTIA_APP_URL = "https://app.courtia.fr";
 /**
  * L'espace agents immobiliers.
  *
- * ⚠️ pro.courtia.fr existe et répond, mais sert aujourd'hui exactement la même
- * page que app.courtia.fr : l'espace pro n'a pas encore de route dédiée dans
- * l'application. Envoyer un agent sur pro.courtia.fr lui afficherait l'écran de
- * connexion emprunteur — autant l'envoyer sur l'adresse honnête. À basculer sur
- * "https://pro.courtia.fr" le jour où la route /pro existe.
+ * Il pointait sur `app.courtia.fr` faute de mieux : `pro.courtia.fr` répondait,
+ * mais servait la même page que l'espace emprunteur, et un agent y arrivait sur
+ * « Retrouvez votre dossier ». Depuis le 12/08/2026 l'espace agent existe pour
+ * de bon — connexion pro, acquéreurs, liens d'invitation, outils, conformité —
+ * et le bouton mène enfin là où son libellé le promet.
  */
-export const COURTIA_PRO_URL = COURTIA_APP_URL;
+export const COURTIA_PRO_URL = "https://pro.courtia.fr";
 
 /** Coordonnées publiques, identiques à celles des mentions légales. */
 export const COURTIA_EMAIL = "bpoisson@courtia.fr";
