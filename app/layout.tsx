@@ -25,7 +25,15 @@ export const metadata: Metadata = {
     description: "L’outil IA pour comprendre votre profil, préparer votre dossier et sécuriser votre projet avant la décision de la banque.",
     images: ["/og.jpg"],
   },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/icons/icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/icon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/icons/icon-32.png",
+    apple: "/icons/icon-180.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
