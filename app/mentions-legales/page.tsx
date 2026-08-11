@@ -56,10 +56,9 @@ export default function MentionsLegalesPage() {
                 <div><dt>Société</dt><dd>LB FINANCE, EURL au capital social de 3 000 €</dd></div>
                 <div><dt>Nom commercial</dt><dd>Courtia</dd></div>
                 <div><dt>Siège social</dt><dd>19 rue de la pièce du camp, 17300 Vergeroux</dd></div>
-                {/* Le numéro RCS est le SIREN (9 chiffres). Le « 00022 » qui suivait
-                    en faisait un SIRET — un établissement, pas l'immatriculation. */}
-                <div><dt>Immatriculation</dt><dd>RCS La Rochelle n° 882 216 559</dd></div>
-                <div><dt>SIRET du siège</dt><dd>882 216 559 00022</dd></div>
+                {/* Numéro confirmé par Benjamin le 11/08/2026 : le SIRET du siège se
+                    termine bien par 00022. Une seule ligne, comme il l'a demandé. */}
+                <div><dt>Immatriculation</dt><dd>SIRET 882 216 559 00022 — RCS La Rochelle</dd></div>
                 <div><dt>Téléphone</dt><dd><a href="tel:+33617944958">06 17 94 49 58</a></dd></div>
                 <div><dt>Courriel</dt><dd><a href="mailto:bpoisson@courtia.fr">bpoisson@courtia.fr</a></dd></div>
                 <div><dt>Directeur de la publication</dt><dd>Benjamin Poisson, gérant</dd></div>
