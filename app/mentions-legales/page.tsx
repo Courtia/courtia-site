@@ -50,9 +50,16 @@ export default function MentionsLegalesPage() {
             <section className="legal-block" id="editeur">
               <h2>Éditeur du site</h2>
               <dl className="legal-key">
-                <div><dt>Société</dt><dd>Courtia, EURL au capital social de 3 000 €</dd></div>
+                {/* « Courtia, EURL » nommait une société qui n'existe pas : Courtia
+                    est le nom commercial, LB FINANCE la raison sociale. C'est la
+                    personne morale qui engage sa responsabilité, pas la marque. */}
+                <div><dt>Société</dt><dd>LB FINANCE, EURL au capital social de 3 000 €</dd></div>
+                <div><dt>Nom commercial</dt><dd>Courtia</dd></div>
                 <div><dt>Siège social</dt><dd>19 rue de la pièce du camp, 17300 Vergeroux</dd></div>
-                <div><dt>Immatriculation</dt><dd>RCS La Rochelle n° 882 216 559 00022</dd></div>
+                {/* Le numéro RCS est le SIREN (9 chiffres). Le « 00022 » qui suivait
+                    en faisait un SIRET — un établissement, pas l'immatriculation. */}
+                <div><dt>Immatriculation</dt><dd>RCS La Rochelle n° 882 216 559</dd></div>
+                <div><dt>SIRET du siège</dt><dd>882 216 559 00022</dd></div>
                 <div><dt>Téléphone</dt><dd><a href="tel:+33617944958">06 17 94 49 58</a></dd></div>
                 <div><dt>Courriel</dt><dd><a href="mailto:bpoisson@courtia.fr">bpoisson@courtia.fr</a></dd></div>
                 <div><dt>Directeur de la publication</dt><dd>Benjamin Poisson, gérant</dd></div>
