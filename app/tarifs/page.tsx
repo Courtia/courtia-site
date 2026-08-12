@@ -33,7 +33,7 @@ const plans = [
     title: <>Dossier de prêt<br /><em>au bout des doigts</em></>,
     price: "199 €",
     description: "Téléchargez un dossier complet, une note de synthèse et un plan de financement prêts à présenter aux banques.",
-    items: ["Dossier de prêt complet", "Note de synthèse personnalisée", "Plan de financement structuré"],
+    items: ["Dossier de prêt complet", "Note de synthèse personnalisée", "Plan de financement structuré", "3 comparatifs de simulation bancaire"],
     tone: "pricing-card-dark",
     action: "Préparer mon dossier",
   },
