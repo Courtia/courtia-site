@@ -1166,3 +1166,32 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
    le détacher, comme demandé. Le dégradé n'est pas rompu — il est peint sur
    le <em> parent et découpé sur le texte de tous ses descendants. */
 .site-shell .hero h1 em b { font-weight:700; }
+
+/* ---------- Le dernier glyphe de chaque ligne était rogné (12/08/2026) ----------
+   Mesuré sur courtia.fr : sur chaque fragment de ligne d'un titre à dégradé,
+   la zone peinte s'arrêtait EXACTEMENT sur l'encre du dernier caractère —
+   marge zéro. L'interlettrage négatif (-.075em, soit -3,8 px à cette taille)
+   supprime la réserve d'avance après le glyphe, et `background-clip:text`
+   rase alors le bord arrondi d'un « e » ou d'un « c » en fin de ligne. Visible
+   seulement quand le titre s'empile, puisqu'il faut un mot en fin de ligne.
+
+   La réserve est rendue par un `padding-right` égal à l'interlettrage retiré.
+   ⚠️ `box-decoration-break:clone` est INDISPENSABLE : sans lui, le padding ne
+   s'applique qu'au DERNIER fragment, et les lignes intermédiaires — celles où
+   le défaut se voit — resteraient rognées.
+   ⚠️ Ne pas écrire le préfixe -webkit- à la main : c'est le build qui préfixe,
+   et l'écrire soi-même ferait tomber la propriété standard. */
+.site-shell .hero h1 em,
+.site-shell .section-intro h2 em,
+.site-shell .story-section h2 em,
+.site-shell .mosaic-heading h2 em,
+.site-shell .platform-section h2 em,
+.site-shell .screens-section h2 em,
+.site-shell .offers-heading h2 em,
+.site-shell .timeline-section h2 em,
+.site-shell .pricing-intro h2 em,
+.site-shell .pricing-note-wrap h2 em,
+.site-shell .pricing-hero h1 em {
+  padding-right:.075em;
+  box-decoration-break:clone;
+}
