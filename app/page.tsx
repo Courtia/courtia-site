@@ -134,7 +134,7 @@ export default function Home() {
         <div className="hero-inner">
           <div className="hero-copy" data-reveal>
             <span className="eyebrow">Le crédit avec un temps d&apos;avance</span>
-            <h1>Votre financement<br /><em>commence avec Courtia.</em></h1>
+            <h1>Votre financement<br /><em><b>commence</b> avec Courtia.</em></h1>
             <p>Courtia est votre copilote financier : l&apos;outil IA qui vous aide à comprendre votre profil, préparer votre dossier et présenter le projet que votre banquier attend.</p>
             <div className="hero-actions">
               <a className="button button-primary" href={COURTIA_APP_URL}>Commencer <span>↗</span></a>

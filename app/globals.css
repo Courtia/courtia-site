@@ -1161,3 +1161,8 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
 .footer-contact a:hover { color:#fff; text-decoration:underline; text-underline-offset:3px; }
 .footer-contact i { background:currentColor; display:block; height:9px; opacity:.35; width:1px; }
 @media (max-width:680px) { .footer-contact { flex-wrap:wrap; gap:7px; } }
+
+/* Le titre du héros est en graisse 400 : « commence » est appuyé à 700 pour
+   le détacher, comme demandé. Le dégradé n'est pas rompu — il est peint sur
+   le <em> parent et découpé sur le texte de tous ses descendants. */
+.site-shell .hero h1 em b { font-weight:700; }
