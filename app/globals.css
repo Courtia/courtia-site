@@ -1195,3 +1195,20 @@ h1 { font-size:clamp(51px,6vw,78px); line-height:.98; margin:22px 0 25px; }.hero
   padding-right:.075em;
   box-decoration-break:clone;
 }
+
+/* ============================================================
+   Pages de guide (13/08/2026) — /prets-immobiliers, /assurance-de-pret,
+   /qui-sommes-nous. Elles réutilisent la structure des mentions légales ;
+   ne s'ajoutent ici que le tableau comparatif et la rangée de boutons.
+   ============================================================ */
+.guide-table-wrap { overflow-x:auto; }
+.guide-table { border-collapse:collapse; font-size:12px; line-height:1.55; margin:18px 0 6px; min-width:520px; width:100%; }
+.guide-table th, .guide-table td { border:1px solid #d8e4ea; padding:13px 15px; text-align:left; vertical-align:top; }
+.guide-table thead th { background:#0b1b2a; color:white; font-size:12px; }
+.guide-table thead th small { color:#9fb5c2; display:block; font-size:10px; font-weight:400; margin-top:4px; }
+.guide-table tbody th { background:#eef4f7; font-size:11px; white-space:nowrap; }
+.guide-table td { background:white; color:#31485a; }
+.guide-actions { display:flex; flex-wrap:wrap; gap:11px; margin:24px 0 10px; }
+.guide-actions .button { font-size:12px; }
+.guide-actions .button:not(.button-primary) { border:1px solid #c3d4dd; color:#0b1b2a; }
+@media (max-width:680px) { .guide-actions { flex-direction:column; align-items:stretch; } }

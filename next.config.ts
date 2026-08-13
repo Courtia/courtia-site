@@ -27,11 +27,8 @@ const nextConfig: NextConfig = {
       // La seule correspondance directe : l'espace partenaire devient l'espace pro.
       { source: "/espace-partenaire", destination: "/professionnels", permanent: true },
 
-      // Pages éditoriales sans équivalent aujourd'hui. À recréer aux mêmes
-      // adresses pour récupérer le référencement — retirer ces lignes ce jour-là.
-      { source: "/qui-sommes-nous", destination: "/", permanent: true },
-      { source: "/prets-immobiliers", destination: "/", permanent: true },
-      { source: "/assurance-de-pret", destination: "/", permanent: true },
+      // Les trois pages éditoriales ont été recréées le 13/08/2026 aux mêmes
+      // adresses (contenu de la sauvegarde WordPress) : plus de redirection.
 
       // Simulateurs supprimés.
       { source: "/simulateur-de-credit", destination: "/", permanent: true },
